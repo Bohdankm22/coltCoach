@@ -473,7 +473,15 @@
                                     <td> <%= task.CourseID %></td>
                                     <td> <%= (new Date(task.Deadline_date).getDate()) %></td>
                                     <td > <%= task.Description %></td>
-                                    <td class=""> <%= task.Folder %></td>
+
+                                    <% if (task.Folder === 'Active') { %>
+                                    <td class="bg-danger"> <%= task.Folder %></td>
+                                    <% } else if (task.Folder === 'Complete' ) { %>
+                                    <td class="bg-success"> <%= task.Folder %></td>
+                                    <% } else { %>
+                                    <td class="bg-success"> <%= task.Folder %></td>
+                                    <% } %>
+
                                 </tr>
 
                                 <% }) %>
