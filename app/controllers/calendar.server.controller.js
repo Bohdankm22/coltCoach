@@ -8,8 +8,11 @@ exports.render = function(req, res) {
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
 
+    let username = require('../../data/user').studentName;
+
 	// Use the 'response' object to render the 'index' view with a 'title' property
 	res.render('calendar', {
-		title: 'Calendar Page'
+		title: 'Calendar Page',
+        username: username
 	});
 };
