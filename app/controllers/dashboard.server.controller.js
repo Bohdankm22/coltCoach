@@ -4,6 +4,8 @@ exports.render = function(req, res) {
 	if (req.session.lastVisit) {
 		console.log(req.session.lastVisit);
 	}
+    let username = req.body.Username;
+    req.session.username = username;
 
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
