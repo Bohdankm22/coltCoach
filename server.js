@@ -3,9 +3,13 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Load the module dependencies
 const configureExpress = require('./config/express');
+const express = require('express');
 
 // Create a new Express application instance
 const app = configureExpress();
+
+// Configure static file serving
+app.use("/public", express.static(__dirname + "/public"));
 
 // Use the Express application instance to listen to the '3000' port
 app.listen(3000);

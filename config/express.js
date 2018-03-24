@@ -44,9 +44,7 @@ module.exports = function() {
 	// Load the routing files
 	require('../app/routes/index.server.routes.js')(app);
 
-	// Configure static file serving
-	app.use(express.static('./public'));
 
-	// Return the Express application instance
+    // Return the Express application instance
 	return app;
 };
