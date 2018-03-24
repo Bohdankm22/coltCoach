@@ -4,14 +4,19 @@ exports.render = function(req, res) {
 	if (req.session.lastVisit) {
 		console.log(req.session.lastVisit);
 	}
-    let username = req.body.Username;
-    req.session.username = username;
+    // let username = req.body.Username;
+    // req.session.username = username;
+    let course = 'all';
+    if(req.query.course) {
+	    course = req.query.course;
+    }
 
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
 
 	// Use the 'response' object to render the 'index' view with a 'title' property
 	res.render('dashboard', {
-		title: 'Dashboard Page'
+		title: 'Dashboard Page',
+        course: course
 	});
 };
