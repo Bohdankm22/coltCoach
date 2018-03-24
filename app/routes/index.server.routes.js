@@ -8,6 +8,8 @@ module.exports = function(app) {
 	// Mount the 'index' controller's 'render' method
     app.route('/').get(index.render);
     app.route('/dashboard').get(dashboard.render);
+    app.route('/dashboard').post(dashboard.render);
     app.route('/calendar').get(calendar.render);
+    app.route('/calendar').post(calendar.render);
 
 };
