@@ -4,7 +4,7 @@
     "program": "Software Engineering Technology",
     "Courses": [{
             "CourseID": 1,
-            "CourseCode": "COP311",
+            "CourseCode": "COMP 311",
             "CourseName": "Software Testing & Quality"
         },
 
