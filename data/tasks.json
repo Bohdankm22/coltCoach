@@ -5,7 +5,7 @@
             "Id" : 1, 
             "Name" : "Assignment 2",
             "Importance" : true,
-            "CourseID" : "COP311", 
+            "CourseID" : "COMP311",
             "CourseName" : "Software Testing & Quality",
             "Folder" : "Active",
             "Deadline_date" :  "2018-03-25T02:23:00.356Z",    
@@ -16,7 +16,7 @@
             "Id" : 2, 
             "Name" : "Assignment 1",
             "Importance" : false,
-            "CourseID" : "COP311", 
+            "CourseID" : "COMP311",
             "CourseName" : "Software Testing & Quality",
             "Folder" : "Done",
             "Deadline_date" :  "2018-03-20T02:23:00.356Z", 
@@ -79,14 +79,14 @@
         },
 
         {
-            "Id" : 8, 
+            "Id" : 20,
             "Name" : "Lab Assignment 2",
             "Importance" : true,
             "CourseID" : "COMP228",
             "CourseName" : "Java",
             "Folder" : "Active",
-            "Deadline_date" :  "2018-04-08T02:23:00.356Z", 
-            "Description" : "Practice Inheritance and Polymorphism"
+            "Deadline_date" :  "2018-05-01T02:23:00.356Z",
+            "Description" : "JavaFX"
         },
 
         {
@@ -128,7 +128,106 @@
             "Folder" : "Active",
             "Deadline_date" :  "2018-04-10T02:23:00.356Z", 
             "Description" : "Practice Marticies"
-        }
+        },
+
+        {
+            "Id" : 12,
+            "Name" : "Assignment 2",
+            "Importance" : true,
+            "CourseID" : "MATH210",
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-15T02:23:00.356Z",
+            "Description" : "Practice Vectors"
+        },
+
+        {
+            "Id" : 13,
+            "Name" : "Assignment 3",
+            "Importance" : true,
+            "CourseID" : "MATH210",
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-20T02:23:00.356Z",
+            "Description" : "Linear Algebra Test"
+        },
+
+        {
+            "Id" : 14,
+            "Name" : "Quiz 1",
+            "Importance" : true,
+            "CourseID" : "MATH210",
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Done",
+            "Deadline_date" :  "2018-01-20T02:23:00.356Z",
+            "Description" : "Start Statistic firs Quiz"
+        },
+
+        {
+            "Id" : 15,
+            "Name" : "Quiz 2 ",
+            "Importance" : true,
+            "CourseID" : "MATH210",
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Active",
+           "Deadline_date" :  "2018-04-20T02:23:00.356Z",
+            "Description" : "Online quiz through Pearson"
+        },
+
+        {
+            "Id" : 16,
+            "Name" : "Online quiz",
+            "Importance" : false,
+            "CourseID" : "MATH210",
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Arhive",
+            "Description" : "Online quiz through Pearson"
+        },
+
+        {
+            "Id" : 17,
+            "Name" : "Test 2",
+            "Importance" : true,
+            "CourseID" : "GNED177",
+            "CourseName" : "Film Art and Action",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-18T02:23:00.356Z",
+            "Description" : "Test 2 preparation"
+        },
+
+        {
+            "Id" : 18,
+            "Name" : "Test 1",
+            "Importance" : false,
+            "CourseID" : "GNED177",
+            "CourseName" : "Film Art and Action",
+            "Folder" : "Done",
+            "Deadline_date" :  "2018-02-18T02:23:00.356Z",
+            "Description" : "Test 1 preparation"
+        },
+
+        {
+          "Id" : 19,
+          "Name" : "Assignment 1",
+          "Importance" : false,
+          "CourseID" : "COMP100",
+          "CourseName" : "Programming 1",
+          "Folder" : "Done",
+          "Deadline_date" :  "2018-02-01T02:23:00.356Z",
+          "Description" : "Assignment on if and switch statements"
+        },
+
+      {
+        "Id" : 21,
+        "Name" : "Assignment 2",
+        "Importance" : true,
+        "CourseID" : "COMP100",
+        "CourseName" : "Programming 1",
+        "Folder" : "Active",
+        "Deadline_date" :  "2018-04-01T02:23:00.356Z",
+        "Description" : "Practice methods and classes"
+      }
+
     ]
 }
 
