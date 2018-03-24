@@ -11,7 +11,7 @@ exports.render = function(req, res) {
     let username = require('../../data/user').studentName;
 
 	// Use the 'response' object to render the 'index' view with a 'title' property
-	res.render('calendar', {
+	res.render('addtask', {
 		title: 'Add Task',
         username: username
 	});
