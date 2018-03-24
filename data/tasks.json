@@ -107,26 +107,26 @@
             "Importance" : false,
             "CourseID" : "GNED177",
             "CourseName" : "Film Art and Action",
-            "Folder" : "Arhive",
+            "Folder" : "Deleted",
             "Description" : "Shoot a movie 10 minutes long"
         },
         {
-            "Id" : 10, 
+            "Id" : 10,
             "Name" : "Movie presentation",
             "Importance" : false,
             "CourseID" : "GNED177",
             "CourseName" : "Film Art and Action",
-            "Folder" : "Arhive",
+            "Folder" : "Deleted",
             "Description" : "Movie presentation"
         },
         {
-            "Id" : 11, 
+            "Id" : 11,
             "Name" : "Assignment 1",
             "Importance" : true,
             "CourseID" : "MATH210",
             "CourseName" : "Linear Algebra & Statistic",
             "Folder" : "Active",
-            "Deadline_date" :  "2018-04-10T02:23:00.356Z", 
+            "Deadline_date" :  "2018-04-10T02:23:00.356Z",
             "Description" : "Practice Marticies"
         },
 
@@ -180,7 +180,7 @@
             "Importance" : false,
             "CourseID" : "MATH210",
             "CourseName" : "Linear Algebra & Statistic",
-            "Folder" : "Arhive",
+            "Folder" : "Deleted",
             "Description" : "Online quiz through Pearson"
         },
 
