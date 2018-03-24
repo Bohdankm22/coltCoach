@@ -1,0 +1,42 @@
+{
+    "studentID": 300509012,
+    "studentName": "John Cena",
+    "program": "Software Engineering Technology",
+    "Courses": [{
+            "CourseID": 1,
+            "CourseCode": "COP311",
+            "CourseName": "Software Testing & Quality"
+        },
+
+        {
+            "CourseID": 2,
+            "CourseCode": "COMP 100",
+            "CourseName": "Programming 1"
+        },
+
+
+        {
+            "CourseID": 3,
+            "CourseCode": "ENGL 253",
+            "CourseName": "Bus.Communications"
+        },
+
+        {
+            "CourseID": 4,
+            "CourseCode": "COMP 228",
+            "CourseName": "Java"
+        },
+
+        {
+            "CourseID": 5,
+            "CourseCode": "GNED 177",
+            "CourseName": "Film Art and Action"
+        },
+
+        {
+            "CourseID": 6,
+            "CourseCode": "MATH 210",
+            "CourseName": "Linear Algebra & Statistic"
+        }
+    ]
+}

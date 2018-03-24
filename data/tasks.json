@@ -121,12 +121,13 @@
         },
         {
             "Id" : 11, 
-            "Name" : "Movie presentation",
-            "Importance" : false,
-            "CourseID" : "GNED 177", 
-            "CourseName" : "Film Art and Action",
-            "Folder" : "Arhive",
-            "Description" : "Movie presentation"
+            "Name" : "Assignment 1",
+            "Importance" : true,
+            "CourseID" : "MATH 210", 
+            "CourseName" : "Linear Algebra & Statistic",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-10T02:23:00.356Z", 
+            "Description" : "Practice Marticies"
         },
     ]
 }
