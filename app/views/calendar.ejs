@@ -316,11 +316,7 @@
     <div id="organizerContainer" style="margin-left: 8px;"></div>
 </div>
 <script>
-    /*
-Full tutorial on how to use the Calendar Javascript Library
 
-https://github.com/nizarmah/calendar-javascript-lib/blob/master/README.md
-*/
 
     function Calendar(id, size, labelSettings, colors) {
         this.id = id;
@@ -681,18 +677,13 @@ https://github.com/nizarmah/calendar-javascript-lib/blob/master/README.md
         }
     };
 
-    // end of library
-    // full tutorial on how to use it is on GitHub
-    // https://github.com/nizarmah/Calendar-Javascript-Library/blob/master/README.md
 
-    /* end of library; everything is explained below; i'm sorry for the messy code and my bad practices; please criticise me */
 
-    var calendar = new Calendar("calendarContainer", "small", [ "Wednesday", 3 ], [ "#e91e63", "#c2185b", "#ffffff", "#f8bbd0" ]);
+    var calendar = new Calendar("calendarContainer", "small", [ "Wednesday", 3 ], [ "#4d4dff", "#8080ff", "#ffffff", "#ebebfa" ]);
     var organizer = new Organizer("organizerContainer", calendar);
 
     currentDay = calendar.date.getDate(); // used this in order to make anyday today depending on the current today
 
-    // my best way of organizing data, maybe that can be the outcome of joining multiple tables in the database and then parsing them in such a manner, easier for the person to push use a date and the events of it
     data = {
         years: [
             {
