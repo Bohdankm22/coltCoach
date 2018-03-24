@@ -15,6 +15,12 @@ exports.render = function(req, res) {
         tasks = tasks.filter(task => task.CourseID === course);
     }
 
+    tasks.sort(function(a,b){
+        // Turn your strings into dates, and then subtract them
+        // to get a value that is either negative, positive, or zero.
+        return new Date(a.Deadline_date) - new Date(b.Deadline_date);
+    });
+
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
 
