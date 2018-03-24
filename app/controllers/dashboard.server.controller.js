@@ -10,6 +10,7 @@ exports.render = function(req, res) {
     if(req.query.course) {
 	    course = req.query.course;
     }
+    let tasks = require('../../data/tasks').Tasks;
 
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
@@ -17,6 +18,7 @@ exports.render = function(req, res) {
 	// Use the 'response' object to render the 'index' view with a 'title' property
 	res.render('dashboard', {
 		title: 'Dashboard Page',
-        course: course
+        course: course,
+        tasks: tasks
 	});
 };
