@@ -1,53 +1,17 @@
-let express = require('express'),
-    createError = require('http-errors'),
-    path = require('path'),
-    cookieParser = require('cookie-parser'),
-    logger = require('morgan'),
-    app = express(),
-    port = process.env.PORT || 3000,
-    // FishTrack = require('./api/models/fishTrackModel'), //created model loading here
-    bodyParser = require('body-parser');
+// Set the 'NODE_ENV' variable
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
-//Adding EJS view template engine
-app.set('view engine', 'ejs');
-app.set('views', './app/views');
+// Load the module dependencies
+const configureExpress = require('./config/express');
 
-//Adding routes
-let indexRouter = require('./app/routes/index');
-let usersRouter = require('./app/routes/users');
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+// Create a new Express application instance
+const app = configureExpress();
 
-//Adding MiddleWare
-app.use(logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use("/public", express.static(__dirname + "/public"));
+// Use the Express application instance to listen to the '3000' port
+app.listen(3000);
 
+// Log the server status to the console
+console.log('Server running at http://localhost:3000/');
 
-
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    next(createError(404));
-});
-
-// error handler
-app.use(function (err, req, res, next) {
-    // set locals, only providing error in development
-    res.locals.message = err.message;
-    res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-    // render the error page
-    res.status(err.status || 500);
-    res.render('error');
-});
-
-app.listen(port);
-
-
-console.log('Server started at: ' + 'http://localhost:' + port);
-
+// Use the module.exports property to expose our Express application instance for external usage
 module.exports = app;
