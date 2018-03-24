@@ -4,13 +4,16 @@ exports.render = function(req, res) {
 	if (req.session.lastVisit) {
 		console.log(req.session.lastVisit);
 	}
-    // let username = req.body.Username;
-    // req.session.username = username;
+
+    // Getting tasks from json file
+    let tasks = require('../../data/tasks').Tasks;
+
+	// Filter by course
     let course = 'all';
     if(req.query.course) {
-	    course = req.query.course;
+        course = req.query.course;
+        tasks = tasks.filter(task => task.CourseID === course);
     }
-    let tasks = require('../../data/tasks').Tasks;
 
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
