@@ -1,0 +1,133 @@
+{
+    "Tasks": 
+    [
+        {
+            "Id" : 1, 
+            "Name" : "Assignment 2",
+            "Importance" : true,
+            "CourseID" : "COP311", 
+            "CourseName" : "Software Testing & Quality",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-03-25T02:23:00.356Z",    
+            "Description" : "Test an aplication using JUnit"
+        },
+
+        {
+            "Id" : 2, 
+            "Name" : "Assignment 1",
+            "Importance" : false,
+            "CourseID" : "COP311", 
+            "CourseName" : "Software Testing & Quality",
+            "Folder" : "Done",
+            "Deadline_date" :  "2018-03-20T02:23:00.356Z", 
+            "Description" : "Install and Configure CheckStyle"
+        },   
+
+        {
+            "Id" : 3, 
+            "Name" : "Preperation for Mid Term Test",
+            "Importance" : true,
+            "CourseID" : "COMP 100", 
+            "CourseName" : "Programming 1",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-03-29T02:23:00.356Z", 
+            "Description" : "Testing knowledge of Loops and Methods in C#"
+        },
+        
+        {
+            "Id" : 4, 
+            "Name" : "Assignment 1",
+            "Importance" : false,
+            "CourseID" : "ENGL 253", 
+            "CourseName" : "Bus.Communications",
+            "Folder" : "Deleted",
+            "Deadline_date" :  "2018-03-01T02:23:00.356Z", 
+            "Description" : "Write a Formar Report"
+        },
+
+        {
+            "Id" : 5, 
+            "Name" : "Assignment 2",
+            "Importance" : false,
+            "CourseID" : "ENGL 253", 
+            "CourseName" : "Bus.Communications",
+            "Folder" : "Done",
+            "Deadline_date" :  "2018-02-02T02:23:00.356Z", 
+            "Description" : "Write a Memo"
+        },
+
+        {
+            "Id" : 6, 
+            "Name" : "Assignment 3",
+            "Importance" : true,
+            "CourseID" : "ENGL 253", 
+            "CourseName" : "Bus.Communications",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-05T02:23:00.356Z", 
+            "Description" : "Group Presentation"
+        },
+
+        {
+            "Id" : 7, 
+            "Name" : "Lab Assignment 1",
+            "Importance" : false,
+            "CourseID" : "COMP 228", 
+            "CourseName" : "Java",
+            "Folder" : "Done",
+            "Deadline_date" :  "2018-02-29T02:23:00.356Z", 
+            "Description" : "Practice Getters and setters"
+        },
+
+        {
+            "Id" : 8, 
+            "Name" : "Lab Assignment 2",
+            "Importance" : true,
+            "CourseID" : "COMP 228", 
+            "CourseName" : "Java",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-08T02:23:00.356Z", 
+            "Description" : "Practice Inheritance and Polymorphism"
+        },
+
+        {
+            "Id" : 8, 
+            "Name" : "Lab Assignment 2",
+            "Importance" : true,
+            "CourseID" : "COMP 228", 
+            "CourseName" : "Java",
+            "Folder" : "Active",
+            "Deadline_date" :  "2018-04-12T02:23:00.356Z", 
+            "Description" : "Practice Inheritance and Polymorphism"
+        },
+
+        
+        {
+            "Id" : 9, 
+            "Name" : "Shoot a movie",
+            "Importance" : false,
+            "CourseID" : "GNED 177", 
+            "CourseName" : "Film Art and Action",
+            "Folder" : "Arhive",
+            "Description" : "Shoot a movie 10 minutes long"
+        },
+        {
+            "Id" : 10, 
+            "Name" : "Movie presentation",
+            "Importance" : false,
+            "CourseID" : "GNED 177", 
+            "CourseName" : "Film Art and Action",
+            "Folder" : "Arhive",
+            "Description" : "Movie presentation"
+        },
+        {
+            "Id" : 11, 
+            "Name" : "Movie presentation",
+            "Importance" : false,
+            "CourseID" : "GNED 177", 
+            "CourseName" : "Film Art and Action",
+            "Folder" : "Arhive",
+            "Description" : "Movie presentation"
+        },
+    ]
+}
+
