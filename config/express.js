@@ -1,3 +1,8 @@
+/**
+ Copyright (c) 2018
+ Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
+ */
+
 // Load the module dependencies
 const config = require('./config');
 const express = require('express');

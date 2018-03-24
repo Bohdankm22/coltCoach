@@ -1,3 +1,8 @@
+/**
+ Copyright (c) 2018
+ Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
+ */
+
 // Set the 'NODE_ENV' variable
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 

@@ -1,3 +1,8 @@
+/**
+ Copyright (c) 2018
+ Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
+ */
+
 // Load the 'index' controller
 const index = require('../controllers/index.server.controller');
 const dashboard = require('../controllers/dashboard.server.controller');

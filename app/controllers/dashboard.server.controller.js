@@ -1,3 +1,7 @@
+/**
+ Copyright (c) 2018
+ Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
+ */
 
 // Create a new 'render' controller method
 exports.render = function(req, res) {
