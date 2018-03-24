@@ -424,68 +424,95 @@
                     </div>
                 </div>
                 <!-- /.panel-heading -->
-            <div class="panel-body">
-                <div class="row offset-1">
-                    <div class="col-lg-12">
-                        <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
-                                <tr>
-                                    <th data-sortable="true"> Name</th>
-                                    <th>Course ID</th>
-                                    <th>Date</th>
-                                    <th>Description</th>
-                                    <th>Status</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <!-- /.panel-heading John -->
-                                <% tasks.forEach(function(task){ %>
+                <div class="panel-body">
+                    <div class="row offset-1">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <tr>
+                                        <th data-sortable="true"> Name</th>
+                                        <th>Course ID</th>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Status</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <!-- /.panel-heading John -->
+                                    <% tasks.forEach(function(task){ %>
 
                                     <% if (task.Folder === 'Done') { %>
-                                <tr class="bg-success">
-                                    <td> <%= task.Name %></td>
-                                    <td> <%= task.CourseID %></td>
-                                    <td> <%= (new Date(task.Deadline_date).getDate()) %></td>
-                                    <td> <%= task.Description %></td>
-                                    <td> <%= task.Folder %></td>
-                                </tr>
+                                    <tr class="bg-success">
+                                        <td> <%= task.Name %></td>
+                                        <td> <%= task.CourseID %></td>
+
+                                        <td> <%= (new Date(task.Deadline_date).toLocaleDateString('en-US', {
+                                                weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: '2-digit'
+                                            })) %></td>
+                                        <td> <%= task.Description %></td>
+                                        <td> <%= task.Folder %></td>
+                                    </tr>
                                     <% } else if (task.Folder === 'Active' ) { %>
-                                <tr class="bg-warning">
-                                    <td> <%= task.Name %></td>
-                                    <td> <%= task.CourseID %></td>
-                                    <td> <%= (new Date(task.Deadline_date).getDate()) %></td>
-                                    <td> <%= task.Description %></td>
-                                    <td> <%= task.Folder %></td>
-                                </tr>
-                                <% } else if (task.Folder === 'Deleted' ) { %>
-                                <tr class="bg-danger">
-                                    <td> <%= task.Name %></td>
-                                    <td> <%= task.CourseID %></td>
-                                    <td> <%= (new Date(task.Deadline_date).getDate()) %></td>
-                                    <td> <%= task.Description %></td>
-                                    <td> <%= task.Folder %></td>
-                                </tr>
+                                    <tr class="bg-warning">
+                                        <td> <%= task.Name %></td>
+                                        <td> <%= task.CourseID %></td>
+                                        <td> <%= (new Date(task.Deadline_date).toLocaleDateString('en-US', {
+                                                weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: '2-digit'
+                                            })) %></td>
+                                        <td> <%= task.Description %></td>
+                                        <td> <%= task.Folder %></td>
+                                    </tr>
+                                    <% } else if (task.Folder === 'Deleted' ) { %>
+                                    <tr class="bg-danger">
+                                        <td> <%= task.Name %></td>
+                                        <td> <%= task.CourseID %></td>
+                                        <% if (task.Deadline_date ) { %>
+
+                                        <td> <%= (new Date(task.Deadline_date).toLocaleDateString('en-US', {
+                                                weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: '2-digit'
+                                            })) %></td>
+                                        <% } else { %>
+                                        <td></td>
+                                        <% } %>
+                                        <td> <%= task.Description %></td>
+                                        <td> <%= task.Folder %></td>
+                                    </tr>
                                     <% } else { %>
-                                <tr>
-                                    <td> <%= task.Name %></td>
-                                    <td> <%= task.CourseID %></td>
-                                    <td> <%= (new Date(task.Deadline_date).getDate()) %></td>
-                                    <td > <%= task.Description %></td>
-                                    <td> <%= task.Folder %></td>
-                                    <% } %>
+                                    <tr>
+                                        <td> <%= task.Name %></td>
+                                        <td> <%= task.CourseID %></td>
+                                        <td> <%= (new Date(task.Deadline_date).toLocaleDateString('en-US', {
+                                                weekday: 'long',
+                                                year: 'numeric',
+                                                month: 'long',
+                                                day: '2-digit'
+                                            })) %></td>
+                                        <td> <%= task.Description %></td>
+                                        <td> <%= task.Folder %></td>
+                                        <% } %>
 
-                                </tr>
+                                    </tr>
 
-                                <% }) %>
+                                    <% }) %>
 
-                                </tbody>
-                            </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->
                         </div>
-                        <!-- /.table-responsive -->
                     </div>
                 </div>
             </div>
-        <!-- /#page-wrapper -->
+                <!-- /#page-wrapper -->
         </div>
     </div>
     <!-- /#wrapper -->
