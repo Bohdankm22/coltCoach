@@ -312,7 +312,7 @@
 </div>
 <div class="wrapper">
     <!--add border-->
-    <div id="calendarContainer"></div>
+    <div id="calendarContainer" style="margin-left: 100px;"></div>
     <div id="organizerContainer" style="margin-left: 8px;"></div>
 </div>
 <script>
@@ -723,6 +723,23 @@ https://github.com/nizarmah/calendar-javascript-lib/blob/master/README.md
                         int: (new Date().getMonth() + 1),
                         days: [
                             {
+                                int: (new Date().getDate()+4),
+                                events: [
+                                    {
+                                        startTime: "6:00",
+                                        endTime: "7:00",
+                                        mTime: "am",
+                                        text: "This is scheduled to show today, anyday."
+                                    },
+                                    {
+                                        startTime: "6:00",
+                                        endTime: "7:00",
+                                        mTime: "am",
+                                        text: "Testing knowledge of Loops and Methods in C#."
+                                    },
+                                ]
+                            },
+                            {
                                 int: (new Date().getDate()),
                                 events: [
                                     {
@@ -732,10 +749,10 @@ https://github.com/nizarmah/calendar-javascript-lib/blob/master/README.md
                                         text: "This is scheduled to show today, anyday."
                                     },
                                     {
-                                        startTime: "5:45",
-                                        endTime: "7:15",
+                                        startTime: "11:00",
+                                        endTime: "11:30",
                                         mTime: "pm",
-                                        text: "WIP Library"
+                                        text: "Test an aplication using JUnit"
                                     },
                                     {
                                         startTime: "10:00",
