@@ -26,6 +26,8 @@
     <!-- Custom Fonts -->
     <link href="/public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -426,8 +428,30 @@
                 </div>
             </div>
 
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-hover table-striped">
 
-        </div>
+            <!-- /.panel-heading John -->
+            <% tasks.forEach(function(task){ %>
+                                <thead>
+            <tr>
+                <td> <%=task.Name %></td>
+                <td> <%=task.CourseID %></td>
+                <td> <%= (new Date(task.Deadline_date).getDate() ) %></td>
+                <td> <%=task.Description %></td>
+            </tr>
+
+            <% })%>
+
+                            </table>
+                        </div>
+                        <!-- /.table-responsive -->
+                    </div>
+                </div>
+            </div>
         <!-- /#page-wrapper -->
 
     </div>
