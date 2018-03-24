@@ -13,7 +13,11 @@ exports.render = function(req, res) {
     let course = 'all';
     if(req.query.course) {
         course = req.query.course;
-        tasks = tasks.filter(task => task.CourseID === course);
+        tasks = tasks.filter(task => task.CourseID.toLowerCase() === course.toLowerCase());
+    }
+    if(req.query.status) {
+        status = req.query.status;
+        tasks = tasks.filter(task => task.Folder.toLowerCase() === status.toLowerCase());
     }
 
     tasks.sort(function(a,b){
