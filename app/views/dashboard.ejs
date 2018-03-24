@@ -447,6 +447,7 @@
                                         <th>Date</th>
                                         <th>Description</th>
                                         <th>Status</th>
+                                        <th>Actions</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -466,6 +467,11 @@
                                             })) %></td>
                                         <td> <%= task.Description %></td>
                                         <td> <%= task.Folder %></td>
+                                        <td>
+                                            <button class="btn btn-success">Done</button>
+                                            <button class="btn btn-primary">Edit</button>
+                                            <button  class="btn btn-danger">Delete</button>
+                                        </td>
                                     </tr>
                                     <% } else if (task.Folder === 'Active' ) { %>
                                     <tr class="bg-warning">
@@ -479,6 +485,11 @@
                                             })) %></td>
                                         <td> <%= task.Description %></td>
                                         <td> <%= task.Folder %></td>
+                                        <td>
+                                            <button class="btn btn-success">Done</button>
+                                            <button class="btn btn-primary">Edit</button>
+                                            <button  class="btn btn-danger">Delete</button>
+                                        </td>
                                     </tr>
                                     <% } else if (task.Folder === 'Deleted' ) { %>
                                     <tr class="bg-danger">
@@ -497,6 +508,11 @@
                                         <% } %>
                                         <td> <%= task.Description %></td>
                                         <td> <%= task.Folder %></td>
+                                        <td>
+                                            <button class="btn btn-success">Done</button>
+                                            <button class="btn btn-primary">Edit</button>
+                                            <button  class="btn btn-danger">Delete</button>
+                                        </td>
                                     </tr>
                                     <% } else { %>
                                     <tr>
@@ -510,10 +526,13 @@
                                             })) %></td>
                                         <td> <%= task.Description %></td>
                                         <td> <%= task.Folder %></td>
+                                        <td>
+                                            <button class="btn btn-success">Done</button>
+                                            <button class="btn btn-primary">Edit</button>
+                                            <button  class="btn btn-danger">Delete</button>
+                                        </td>
                                         <% } %>
-
                                     </tr>
-
                                     <% }) %>
 
                                     </tbody>
