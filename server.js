@@ -10,11 +10,11 @@ let express = require('express'),
 
 //Adding EJS view template engine
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', './app/views');
 
 //Adding routes
-let indexRouter = require('./routes/index');
-let usersRouter = require('./routes/users');
+let indexRouter = require('./app/routes/index');
+let usersRouter = require('./app/routes/users');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
