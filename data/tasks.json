@@ -219,13 +219,13 @@
 
       {
         "Id" : 21,
-        "Name" : "Assignment 2",
+        "Name" : "Quiz 2",
         "Importance" : true,
         "CourseID" : "COMP100",
         "CourseName" : "Programming 1",
         "Folder" : "Active",
-        "Deadline_date" :  "2018-04-01T02:23:00.356Z",
-        "Description" : "Practice methods and classes"
+        "Deadline_date" :  "2018-04-24T02:23:00.356Z",
+        "Description" : "Prepare"
       }
 
     ]
