@@ -5,6 +5,6 @@
 
 // Set the 'development' environment configuration object
 module.exports = {
-	db: 'mongodb://localhost/mean-development',
+	db: 'mongodb://localhost/groupProj',
 	sessionSecret: 'developmentSessionSecret'
 };
