@@ -46,7 +46,6 @@
         <ul class="nav navbar-top-links navbar-right">
 
 
-
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                     <i class="glyphicon glyphicon-calendar"></i> <i class="fa fa-caret-down"></i>
@@ -55,7 +54,7 @@
                     <li>
                         <a href="/calendar">
                             <div>
-                                <strong style="margin-left: 40%;" >Calendar</strong>
+                                <strong style="margin-left: 40%;">Calendar</strong>
                             </div>
                         </a>
                     </li>
@@ -63,7 +62,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <strong style="margin-left: 27%;" >Import To Calendar</strong>
+                                <strong style="margin-left: 27%;">Import To Calendar</strong>
                             </div>
                         </a>
                     </li>
@@ -81,7 +80,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <strong style="margin-left: 40%;" >Add Task</strong>
+                                <strong style="margin-left: 40%;">Add Task</strong>
                             </div>
                         </a>
                     </li>
@@ -89,7 +88,7 @@
                     <li>
                         <a href="#">
                             <div>
-                                <strong style="margin-left: 40%;" >Add Group</strong>
+                                <strong style="margin-left: 40%;">Add Group</strong>
                             </div>
                         </a>
                     </li>
@@ -104,7 +103,7 @@
                     <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-tasks">
-                    <p style="margin-left: 2%; font-weight: bold" > Course Progression: </p>
+                    <p style="margin-left: 2%; font-weight: bold"> Course Progression: </p>
                     <li>
                         <a href="#">
                             <div>
@@ -113,7 +112,8 @@
                                     <span class="pull-right text-muted">40% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%">
                                         <span class="sr-only">40% Complete (success)</span>
                                     </div>
                                 </div>
@@ -129,7 +129,8 @@
                                     <span class="pull-right text-muted">20% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                         <span class="sr-only">20% Complete</span>
                                     </div>
                                 </div>
@@ -145,7 +146,8 @@
                                     <span class="pull-right text-muted">60% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
                                         <span class="sr-only">60% Complete (warning)</span>
                                     </div>
                                 </div>
@@ -161,7 +163,8 @@
                                     <span class="pull-right text-muted">80% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
                                         <span class="sr-only">80% Complete (danger)</span>
                                     </div>
                                 </div>
@@ -179,15 +182,14 @@
                                     <span class="pull-right text-muted">20% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20"
+                                         aria-valuemin="0" aria-valuemax="100" style="width: 20%">
                                         <span class="sr-only">80% Complete (danger)</span>
                                     </div>
                                 </div>
                             </div>
                         </a>
                     </li>
-
-
 
 
                     <li class="divider"></li>
@@ -325,46 +327,41 @@
 </div>
 
 
+<div id="page-wrapper">
+    <br/>
 
-    <div id="page-wrapper">
-        <br/>
 
-
-    <form action="/dashboard" method="get">
-        <div class="container">
+    <form action="/api/tasks" method="post">
             <h2>Add a new Task: </h2>
-        <div class="form-group">
-            <label for="usr">Task name:</label>
-            <input type="text" class="form-control" id="usr">
-        </div>
-        <div class="form-group">
-            <label for="cCode">Course Code:</label>
-            <input type="text" class="form-control" id="cCode">
-        </div>
+            <div class="form-group">
+                <label for="usr">Task name:</label>
+                <input type="text" class="form-control" id="usr" name="taskName">
+            </div>
+            <div class="form-group">
+                <label for="cCode">Course Code:</label>
+                <input type="text" class="form-control" id="cCode" name="courseCode">
+            </div>
             <div class="form-group">
                 <label for="cCode">Course Name:</label>
-                <input type="text" class="form-control" id="cCode">
+                <input type="text" class="form-control" id="cCode" name="courseName">
             </div>
-        <br/>
-        <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Status
-                <span class="caret"></span></button>
-            <ul class="dropdown-menu">
-                <li><a href="#">Active</a></li>
-                <li><a href="#">Done</a></li>
-                <li><a href="#">Deleted</a></li>
-            </ul>
-        </div>
-        <br/>
+            <br/>
+            <div class ="form-group">
+                <select class="dropdown-menu" name="status">
+                      <option value="Active">Active</option>
+                      <option value="Done">Done</option>
+                 </select>
+             </div>
+
+            <br/>
         <div class="form-group">
             <label for="exampleFormControlTextarea1">Description</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" name="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <BR/>
         <button class="btn btn-primary" type="submit">Add
-            </button>
-        </div>
-    </form>
+        </button>
+</form>
 </div>
 
 

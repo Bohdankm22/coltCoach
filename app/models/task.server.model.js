@@ -5,15 +5,18 @@ const TaskSchema = new Schema({
         type: Date,
         default: Date.now
     },
-    Name: String,
-    Importance: String,
+    taskName: String,
     courseCode: String,
     courseName: String,
-    Folder: String,
+    status: ['Active','Done', 'Deleted'],
     Description: String,
     creator: {
         type: Schema.ObjectId,
         ref: 'User'
+    },
+    Importance: {
+        type: Boolean,
+        default: true
     }
 });
 mongoose.model('Task', TaskSchema);

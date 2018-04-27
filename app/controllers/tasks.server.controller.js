@@ -21,7 +21,8 @@ exports.create = function (req, res) {
                 message: getErrorMessage(err)
             });
         } else {
-            res.status(200).json(task);
+            // res.status(200).json(task);
+            res.redirect('/dashboard');
         }
     });
 };
