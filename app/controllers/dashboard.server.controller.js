@@ -2,7 +2,8 @@
  Copyright (c) 2018
  Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
  */
-
+const http = require('http');
+const url = require('url');
 // Create a new 'render' controller method
 exports.render = function(req, res) {
 	// If the session's 'lastVisit' property is set, print it out in the console
@@ -13,6 +14,24 @@ exports.render = function(req, res) {
     // Getting tasks from json file
     let tasks = require('../../data/tasks').Tasks;
 
+    let options = {
+        host: 'localhost',
+        port: 3000,
+        path: '/api/tasks',
+        method: 'GET'
+    };
+    let rawTasks = http.request(options, function(res) {
+        let rawTasks = {};
+        console.log('STATUS: ' + res.statusCode);
+        console.log('HEADERS: ' + JSON.stringify(res.headers));
+        res.setEncoding('utf8');
+        res.on('data', function (chunk) {
+            rawTasks = chunk;
+            console.log(rawTasks);
+            console.log('BODY: ' + chunk);
+            return rawTasks;
+        });
+    }).end();
 	// Filter by course
     let course = 'all';
     if(req.query.course) {
@@ -32,14 +51,16 @@ exports.render = function(req, res) {
 
 	// Set the session's 'lastVisit' property
 	req.session.lastVisit = new Date();
-
+    console.log(rawTasks);
 	let username = require('../../data/user').studentName;
 
-	// Use the 'response' object to render the 'index' view with a 'title' property
+    // Use the 'response' object to render the 'index' view with a 'title' property
 	res.render('dashboard', {
 		title: 'Dashboard Page',
         username: username,
         course: course,
-        tasks: tasks
+        tasks: tasks,
+
 	});
+
 };

@@ -8,7 +8,7 @@ const TaskSchema = new Schema({
     taskName: String,
     courseCode: String,
     courseName: String,
-    status: ['Active','Done', 'Deleted'],
+    status: ['Active','Done','Deleted'],
     Description: String,
     creator: {
         type: Schema.ObjectId,

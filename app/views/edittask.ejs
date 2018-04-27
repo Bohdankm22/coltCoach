@@ -330,40 +330,36 @@
     <br/>
 
 
-    <form action="/dashboard" method="get">
-        <div class="container">
-            <h2>Edit Task: </h2>
-            <div class="form-group">
-                <label for="usr">Task name:</label>
-                <input type="text" class="form-control" id="usr">
-            </div>
-            <div class="form-group">
-                <label for="cCode">Course Code:</label>
-                <input type="text" class="form-control" id="cCode">
-            </div>
-            <div class="form-group">
-                <label for="cCode">Course Name:</label>
-                <input type="text" class="form-control" id="cCode">
-            </div>
-            <br/>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Status
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a href="#">Active</a></li>
-                    <li><a href="#">Done</a></li>
-                    <li><a href="#">Deleted</a></li>
-                </ul>
-            </div>
-            <br/>
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-            </div>
-            <BR/>
-            <button class="btn btn-primary" type="submit">Edit
-            </button>
+    <form action="/api/tasks" method="post">
+        <h2>Add a new Task: </h2>
+        <div class="form-group">
+            <label for="usr">Task name:</label>
+            <input type="text" class="form-control" id="usr" name="taskName">
         </div>
+        <div class="form-group">
+            <label for="cCode">Course Code:</label>
+            <input type="text" class="form-control" id="cCode" name="courseCode">
+        </div>
+        <div class="form-group">
+            <label for="cCode">Course Name:</label>
+            <input type="text" class="form-control" id="cCode" name="courseName">
+        </div>
+        <br/>
+        <div class ="form-group">
+            <select class="dropdown-menu" name="status">
+                <option value="Active">Active</option>
+                <option value="Done">Done</option>
+            </select>
+        </div>
+
+        <br/>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" name="Description" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <BR/>
+        <button class="btn btn-primary" type="submit">Add
+        </button>
     </form>
 </div>
 
