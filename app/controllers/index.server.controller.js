@@ -18,3 +18,9 @@ exports.render = function(req, res) {
 		title: 'Login Page'
 	});
 };
+
+exports.signup = function (req, res) {
+    res.render('signup', {
+        title: 'SignUp Page'
+    });
+}

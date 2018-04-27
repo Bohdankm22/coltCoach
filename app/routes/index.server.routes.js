@@ -13,6 +13,7 @@ const addtask = require('../controllers/addtask.server.controller');
 module.exports = function(app) {
 	// Mount the 'index' controller's 'render' method
     app.route('/').get(index.render);
+    app.route('/signup').get(index.signup);
     app.route('/dashboard').get(dashboard.render);
     app.route('/dashboard').post(dashboard.render);
     app.route('/calendar').get(calendar.render);
