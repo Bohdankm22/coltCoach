@@ -1,5 +1,5 @@
 ﻿// Load the module dependencies
-const users = require('../../app/controllers/users.server.controller');
+const users = require('../../app/controllers/users.server.controller.js');
 const passport = require('passport');
 
 // Define the routes module' method

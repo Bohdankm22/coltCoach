@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const crypto = require('crypto');
 const Schema = mongoose.Schema;
 
-// Define a new 'StudentSchema'
 const UserSchema = new Schema({
     username: String,
     firstName: String,
@@ -76,11 +75,9 @@ UserSchema.statics.findUniqueUsername = function (username, suffix, callback) {
     });
 };
 
-// Configure the 'UserSchema' to use getters and virtuals when transforming to JSON
 UserSchema.set('toJSON', {
     getters: true,
     virtuals: true
 });
 
-// Create the 'User' model out of the 'UserSchema'
 mongoose.model('User', UserSchema);

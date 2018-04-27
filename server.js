@@ -1,19 +1,21 @@
-/**
- Copyright (c) 2018
- Authors: Bohdan Sharipov, Alexey Ulianov, Eskender Memetov, John Calma
- */
-
 // Set the 'NODE_ENV' variable
 process.env.NODE_ENV = process.env.NODE_ENV || 'development';
 
 // Load the module dependencies
+const configureMongoose = require('./config/mongoose');
 const configureExpress = require('./config/express');
+const configurePassport = require('./config/passport');
 const express = require('express');
+
+// Create a new Mongoose connection instance
+const db = configureMongoose();
 
 // Create a new Express application instance
 const app = configureExpress();
 
-// Configure static file serving
+// Configure the Passport middleware
+const passport = configurePassport();
+
 app.use("/public", express.static(__dirname + "/public"));
 
 // Use the Express application instance to listen to the '3000' port
