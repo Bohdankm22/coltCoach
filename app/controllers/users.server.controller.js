@@ -1,5 +1,5 @@
 ﻿const mongoose = require('mongoose');
-const User = mongoose.model('User');
+const User = mongoose.model('User',);
 const passport = require('passport');
 
 // Create a new error handling controller method
@@ -45,7 +45,8 @@ exports.signin = function (req, res, next) {
                 if (err) {
                     res.status(400).send(err);
                 } else {
-                    res.json(user);
+                    // res.json(user);
+                    res.redirect('/dashboard');
                 }
             });
         }
@@ -73,7 +74,8 @@ exports.signup = function (req, res) {
                 if (err) {
                     res.status(400).send(err);
                 } else {
-                    res.json(user);
+                    // res.json(user);
+                    res.redirect('index');
                 }
             });
         }
